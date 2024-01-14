@@ -41,10 +41,13 @@
 
 [Publisher]
 데이터를 생성하고 통지(발행, 게시, 방출)하는 역할을 한다.
+
 [Subscriber] 
 구독한 Publlisher로부터 통지된 데이터를 받아서 처리하는 역할을 한다.
+
 [Subscrition]
 Publisher에 요청할 데이터의 개수를 지정하고, 데이터의 구독을 취소하는 역할을 한다. 
+
 [Processor]
 Publisher, Subscriber의 기능을 모두 가지고 있다. Subscriber로서 다른 Publisher를 구독할 수 있고, Publisher로서 다른 Subscriber가 구독할 수 있다.
 
@@ -62,7 +65,9 @@ Publisher, Subscriber의 기능을 모두 가지고 있다. Subscriber로서 다
 [기억할만 한 내용 또는 느낀점]
 Spring MVC의 문제점을 극복하기 위한 대안으로 등장한 Spring WebFlux 는 Non-Blocking I/O 방식의 통신을 적용
 어떤 서비스에 적합한 것인가? 적합하다고 하면 우리 시스템 중 어떤 기능에 녹여볼 수 있을까? (대용량 트래픽, 스트리밍, 실시간, 마이크로 서비스 등)
+ex) 장비에서 발생하는 실시간 알람 서비스
 
-
+# Chapter 4 리액티브 시스템과 리액티브 프로그래밍
+함수형 프로그래밍과 람다 표현식
 
  
