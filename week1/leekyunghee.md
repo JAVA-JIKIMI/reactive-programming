@@ -81,7 +81,7 @@ Spring MVC의 문제점을 극복하기 위한 대안으로 등장한 Spring Web
 | 10 | Scheduler |
 
 책의 주요 내용을 살펴 보면서 궁금한 점을 파헤쳐보자
-* Reactor의 구성요소는?
+# Reactor의 구성요소는?
 * Reactor에서 Publisher의 역할
   
 | Reactor | Description |
@@ -89,14 +89,29 @@ Spring MVC의 문제점을 극복하기 위한 대안으로 등장한 Spring Web
 | Flux |  0개부터 N개의 데이터를 방출할 수 있는 Publisher |
 | Mono | 0개부터 1개의 데이터를 방출할 수 있는 Publisher |
 
-* Cold 와 Hot의 의미란?
+# Cold 와 Hot의 의미란?
   
 | Reactor | Description |
 | -- | -- |
 | Cold | 구독할 때마다 데이터 흐름이 처음부터 시작되는 Sequence |
 | Hot | 구독이 발생한 시점 이전에 방출된 데이터는 받지 못하고 시점 이후에 방출된 데이터를 전달 받는 Sequence |
 
-* 마블 다이어그램 쉽게 이해하는 방법은?
+# 마블 다이어그램 쉽게 이해해보자 
+* Timeline (left to right)
+ 
+마블은 구슬 모양의 도형으로 데이터 처리 흐름을 의미한다.
+타임라인은 왼쪽에서 오른쪽 방향으로 읽고 최근 발생한 내역은 오른쪽에 가까움
+
+* Element
+타임 라인을 지나는 도형을 element라고 하며 마블의 모양과 색과는 관계없이 타임라인 위의 도형은 Mono 또는 Flux를 사용하면 다루게 될 데이터의 요소
+ 
+- Mono는 0개 혹은 1개
+- Flux는 0개 혹은 그 이상의 Element를 다룬다. 
+ 
+이 때 타임라인은 왼쪽에서 오른쪽으로 이벤트가 발생하는 것을 표시하기 때문에 Reactor에서 데이터는 시간에 따라 연속적으로 발생할 수 있으며 한 개의 데이터 단위를 요소(Element)라고 부른다. 
+
+#### https://projectreactor.io/docs/core/release/reference/#howtoReadMarbles 
+
 * Backpressure 처리 방식은?
 * Sink란?
 
