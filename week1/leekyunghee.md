@@ -58,7 +58,7 @@
 
 
 # Chapter 3 Blocking I/O와 Non-Blocking I/O 
-# Blocking I/O 방식의 문제점을 보완하기 위해서 멀티스레딩 기법으로 추가 스레드를 할당하여 차단된 그 시간을 효율적으로 사용할 수 있으나 컨텍스트 스위칭으로 인한 스레드 전환 비용이 발생
+* Blocking I/O 방식의 문제점을 보완하기 위해서 멀티스레딩 기법으로 추가 스레드를 할당하여 차단된 그 시간을 효율적으로 사용할 수 있으나 컨텍스트 스위칭으로 인한 스레드 전환 비용이 발생
 - Non-Blocking I/O 방식의 통신에서는 말 그대로 스레드가 차단되지 않음
 - Blocking I/O 방식의 통신에서는 해당 스레드가 작업을 처리할 때까지 남아 있는 작업들은 해당 작업이 끝날 때까지 차단되어 대기합니다. 
 
@@ -82,7 +82,18 @@ Spring MVC의 문제점을 극복하기 위한 대안으로 등장한 Spring Web
 
 책의 주요 내용을 살펴 보면서 궁금한 점을 파헤쳐보자
 * Reactor의 구성요소는?
+* Reactor에서 Publisher의 역할
+| Reactor | Description |
+| -- | -- |
+| Flux |  0개부터 N개의 데이터를 방출할 수 있는 Publisher |
+| Mono | 0개부터 1개의 데이터를 방출할 수 있는 Publisher |
+
 * Cold 와 Hot의 의미란?
+| Reactor | Description |
+| -- | -- |
+| Cold | 구독할 때마다 데이터 흐름이 처음부터 시작되는 Sequence |
+| Hot | 구독이 발생한 시점 이전에 방출된 데이터는 받지 못하고 시점 이후에 방출된 데이터를 전달 받는 Sequence |
+
 * 마블 다이어그램 쉽게 이해하는 방법은?
 * Backpressure 처리 방식은?
 * Sink란?
