@@ -28,10 +28,10 @@
 - 비동기 메세지 기반 통신을 바탕으로 한 회복성과 예측 가능한 규모 확장 알고리즘을 통해 시스템의 처리량을 자동으로 확장하고 축소하는 탄력성을 확보
 
 [기억할만 한 내용 또는 느낀점]
-리액트의 설계 원칙과 특징을 정리해볼 수 있었다. 어떤 시스템의 어떤 기능, 어떤 데이터에 적합한 지 알 수 있다. 
+* 리액트의 설계 원칙과 특징을 정리해볼 수 있었다. 어떤 시스템의 어떤 기능, 어떤 데이터에 적합한 지 알 수 있다. 
 
 [다시 보기]
-38page 요약 참고하기
+* 38page 요약 참고하기
 
    
 # Chapter 2 리액티브 스트림즈 구성 요소
@@ -40,16 +40,16 @@
 - pub/sub 패턴
 
 [Publisher]
-데이터를 생성하고 통지(발행, 게시, 방출)하는 역할을 한다.
+* 데이터를 생성하고 통지(발행, 게시, 방출)하는 역할을 한다.
 
 [Subscriber] 
-구독한 Publlisher로부터 통지된 데이터를 받아서 처리하는 역할을 한다.
+* 구독한 Publlisher로부터 통지된 데이터를 받아서 처리하는 역할을 한다.
 
 [Subscrition]
-Publisher에 요청할 데이터의 개수를 지정하고, 데이터의 구독을 취소하는 역할을 한다. 
+* Publisher에 요청할 데이터의 개수를 지정하고, 데이터의 구독을 취소하는 역할을 한다. 
 
 [Processor]
-Publisher, Subscriber의 기능을 모두 가지고 있다. Subscriber로서 다른 Publisher를 구독할 수 있고, Publisher로서 다른 Subscriber가 구독할 수 있다.
+* Publisher, Subscriber의 기능을 모두 가지고 있다. Subscriber로서 다른 Publisher를 구독할 수 있고, Publisher로서 다른 Subscriber가 구독할 수 있다.
 
 - Publisher 구현을 위한 주요 기본 규칙 중 예외에 대한 사항을 기억하자.
 - Publisher는 요청된 것보다 적은 수의 onNext signal을 보내고 onComplete 또는 onError를 호출하여 구독을 종류할 수 있다. 
@@ -68,5 +68,24 @@ Spring MVC의 문제점을 극복하기 위한 대안으로 등장한 Spring Web
 
 # Chapter 4 리액티브 시스템과 리액티브 프로그래밍
 함수형 프로그래밍과 람다 표현식
+
+
+
+| Chapter | Title |
+| -- | -- |
+| 5 | Reactor 개요 |
+| 6 | 마블 다이어그램 |
+| 7 | Cold Sequence와 Hot Sequence |  
+| 8 | Backpressure |
+| 9 | Sinks |
+| 10 | Scheduler |
+
+책의 주요 내용을 살펴 보면서 궁금한 점을 파헤쳐보자
+* Reactor의 구성요소는?
+* Cold 와 Hot의 의미란?
+* 마블 다이어그램 쉽게 이해하는 방법은?
+* Backpressure 처리 방식은?
+* Sink란?
+
 
  
