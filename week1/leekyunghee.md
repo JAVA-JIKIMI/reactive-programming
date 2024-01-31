@@ -39,22 +39,16 @@
 - 구현체는 Reactor 사용
 - pub/sub 패턴
 
-[Publisher]
-* 데이터를 생성하고 통지(발행, 게시, 방출)하는 역할을 한다.
+| Reactive streams | Description |
+| -- | -- |
+| Publisher | 데이터를 생성하고 통지(발행, 게시, 방출)하는 역할을 한다. |
+| Subscriber | 구독한 Publlisher로부터 통지된 데이터를 받아서 처리하는 역할을 한다. |
+| Subscrition | Publisher에 요청할 데이터의 개수를 지정하고, 데이터의 구독을 취소하는 역할을 한다. |  
+| Processor | Publisher, Subscriber의 기능을 모두 가지고 있다. Subscriber로서 다른 Publisher를 구독할 수 있고, Publisher로서 다른 Subscriber가 구독할 수 있다. |
 
-[Subscriber] 
-* 구독한 Publlisher로부터 통지된 데이터를 받아서 처리하는 역할을 한다.
-
-[Subscrition]
-* Publisher에 요청할 데이터의 개수를 지정하고, 데이터의 구독을 취소하는 역할을 한다. 
-
-[Processor]
-* Publisher, Subscriber의 기능을 모두 가지고 있다. Subscriber로서 다른 Publisher를 구독할 수 있고, Publisher로서 다른 Subscriber가 구독할 수 있다.
-
-- Publisher 구현을 위한 주요 기본 규칙 중 예외에 대한 사항을 기억하자.
-- Publisher는 요청된 것보다 적은 수의 onNext signal을 보내고 onComplete 또는 onError를 호출하여 구독을 종류할 수 있다. 
-- Publisher가 처리할 데이터가 끊임없이 발생하는 무한 스트림의 경우, 처리 중 에러가 발생하기 전까지는 종료 자체가 없기 때문에 위 내용에 위배된다. 
-
+* Publisher 구현을 위한 주요 기본 규칙 중 예외에 대한 사항을 기억하자.
+* Publisher는 요청된 것보다 적은 수의 onNext signal을 보내고 onComplete 또는 onError를 호출하여 구독을 종류할 수 있다. 
+* Publisher가 처리할 데이터가 끊임없이 발생하는 무한 스트림의 경우, 처리 중 에러가 발생하기 전까지는 종료 자체가 없기 때문에 위 내용에 위배된다. 
 
 
 # Chapter 3 Blocking I/O와 Non-Blocking I/O 
