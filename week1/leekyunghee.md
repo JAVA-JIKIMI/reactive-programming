@@ -91,19 +91,20 @@ Spring MVC의 문제점을 극복하기 위한 대안으로 등장한 Spring Web
 | Hot | 구독이 발생한 시점 이전에 방출된 데이터는 받지 못하고 시점 이후에 방출된 데이터를 전달 받는 Sequence |
 
 # 마블 다이어그램 쉽게 이해해보자 
-### Timeline (left to right)
- 
 #### 마블은 구슬 모양의 도형으로 데이터 처리 흐름을 의미한다.
+
+### Timeline (left to right)
 #### 타임라인은 왼쪽에서 오른쪽 방향으로 읽고 최근 발생한 내역은 오른쪽에 가까움
 
 ### Element
-#### 타임 라인을 지나는 도형을 element라고 하며 마블의 모양과 색과는 관계없이 타임라인 위의 도형은 Mono 또는 Flux를 사용하면 다루게 될 데이터의 요소
- 
+#### 타임 라인을 지나는 도형을 element라고 하며 마블의 모양과 색과는 관계없이 타임라인 위의 도형은 Mono 또는 Flux를 사용하면 다루게 될 데이터의 요소 
 #### Mono는 0개 혹은 1개
 #### Flux는 0개 혹은 그 이상의 Element를 다룬다. 
- 
 #### 이 때 타임라인은 왼쪽에서 오른쪽으로 이벤트가 발생하는 것을 표시하기 때문에 Reactor에서 데이터는 시간에 따라 연속적으로 발생할 수 있으며 한 개의 데이터 단위를 요소(Element)라고 부른다. 
 
+
+# onNext
+element를 구독(subscribe)하고 나서 다음 element를 읽기 위해서는 onNext()를 사용해서 다음 element를 읽는다.
 ![image](https://github.com/JAVA-JIKIMI/reactive-programming/assets/7133516/727271e9-2c87-4c7d-89ff-3e40ecc439de)
 
 #### https://projectreactor.io/docs/core/release/reference/#howtoReadMarbles 
