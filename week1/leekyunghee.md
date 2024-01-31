@@ -83,12 +83,14 @@ Spring MVC의 문제점을 극복하기 위한 대안으로 등장한 Spring Web
 책의 주요 내용을 살펴 보면서 궁금한 점을 파헤쳐보자
 * Reactor의 구성요소는?
 * Reactor에서 Publisher의 역할
+  
 | Reactor | Description |
 | -- | -- |
 | Flux |  0개부터 N개의 데이터를 방출할 수 있는 Publisher |
 | Mono | 0개부터 1개의 데이터를 방출할 수 있는 Publisher |
 
 * Cold 와 Hot의 의미란?
+  
 | Reactor | Description |
 | -- | -- |
 | Cold | 구독할 때마다 데이터 흐름이 처음부터 시작되는 Sequence |
