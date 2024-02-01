@@ -40,9 +40,18 @@ Sinks.One, Sinks.Many
 Sinks.One은 Mono 의 의미구조(Semantics)를 가진다
 
 ```java
-Sinks.one()
-```
-
-```java
-Sinks.Many()
+public final class Sinks {
+    public static <T> Sinks.One<T> one() {
+        return SinksSpecs.DEFAULT_ROOT_SPEC.one();
+    }    
+    public static ManySpec many() {
+        return SinksSpecs.DEFAULT_ROOT_SPEC.many();
+    }
+    
+    public interface ManySpec {
+        UnicastSpec unicast();
+        MulticaseSpec multicast();
+        MulticaseReplaySpec replay();
+    }
+}
 ```
