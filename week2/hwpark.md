@@ -19,6 +19,7 @@ Cold는 무언가를 새로 시작하고, Hot은 무언가를 새로 시작하�
 ![img_6.png](img_6.png)
 
 # 8. BackPressure
+하단 이미지 출처  
 https://blog.frankel.ch/backpressure-reactive-systems/
 
 ### Drop
