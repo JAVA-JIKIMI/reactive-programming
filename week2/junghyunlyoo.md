@@ -1,3 +1,5 @@
 # spring reactor에서 buffer가 뭘까
 
 publisher가 emit(방출)하는 데이터들을 그룹화해놓는 공간. 즉 spring reactor에서의 buffer는 publisher의 영역에 속함
+
+# sinks? thread safe?
