@@ -19,6 +19,7 @@ Cold는 무언가를 새로 시작하고, Hot은 무언가를 새로 시작하�
 ![img_6.png](img_6.png)
 
 # 8. BackPressure
+하단 이미지 출처  
 https://blog.frankel.ch/backpressure-reactive-systems/
 
 ### Drop
@@ -40,9 +41,18 @@ Sinks.One, Sinks.Many
 Sinks.One은 Mono 의 의미구조(Semantics)를 가진다
 
 ```java
-Sinks.one()
-```
-
-```java
-Sinks.Many()
+public final class Sinks {
+    public static <T> Sinks.One<T> one() {
+        return SinksSpecs.DEFAULT_ROOT_SPEC.one();
+    }    
+    public static ManySpec many() {
+        return SinksSpecs.DEFAULT_ROOT_SPEC.many();
+    }
+    
+    public interface ManySpec {
+        UnicastSpec unicast();
+        MulticaseSpec multicast();
+        MulticaseReplaySpec replay();
+    }
+}
 ```
