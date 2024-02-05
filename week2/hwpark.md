@@ -1,7 +1,5 @@
 # 5. 리액터 개요
 
-![img.png](img.png)
-
 ## 리액터의 단계
 데이터를 생성해서 제공하고  
 데이터를 가공하고  
@@ -14,9 +12,9 @@ Cold는 무언가를 새로 시작하고, Hot은 무언가를 새로 시작하�
 
 ## Cold Sequence
 
-![img_4.png](img_4.png)
+![img_4.png](image/img_4.png)
 ## Hot Sequence
-![img_6.png](img_6.png)
+![img_6.png](image/img_6.png)
 
 # 8. BackPressure
 하단 이미지 출처  
@@ -24,15 +22,15 @@ https://blog.frankel.ch/backpressure-reactive-systems/
 
 ### Drop
 buffer 밖에서 대기하는 먼저 emit된 데이터부터 drop 하는 전략
-![img_2.png](img_2.png)
+![img_2.png](image/img_2.png)
 
 ### Latest
 buffer 밖에서 대기하는 가장 나중(최근)에 emit된 데이터부터 buffer에 채우는 전략
-![img_3.png](img_3.png)
+![img_3.png](image/img_3.png)
 
 ### Buffer
 buffer 안에 있는 데이터부터 drop하는 전략
-![img_1.png](img_1.png)
+![img_1.png](image/img_1.png)
 
 
 # 9.Sink
