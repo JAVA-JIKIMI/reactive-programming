@@ -59,4 +59,15 @@ publisher가 끊임없이 emit하는 무수히 많은 데이터를 적절하게 
 * Sinks는 Publisher와 Subscriber의 기능을 모두 지닌 Processor의 향상된 기능을 제공
 * Reactive Streams에서 발생하는 signal을 프로그래밍적으로 push할 수 있는 기능을 가지고 있는 Publisher의 일종
 * Sinks는 Sinks.Many 또는 Sinks.One interface를 사용해서 Thread-Safe하게 signal을 발생시킴
-* 멀티 스레드 방식으로 Signal을 전송해도 스레드 안정성을 보장하기 때문에 예기치 않은 동작으로 이어지는 것을 방지해 줌 
+* 멀티 스레드 방식으로 Signal을 전송해도 스레드 안정성을 보장하기 때문에 예기치 않은 동작으로 이어지는 것을 방지해 줌
+
+# Reactor의 Scheduler
+* 비동기 프로그래밍을 위해 사용되는 스레드를 관리해주는 역할을 함
+* Scheduler를 사용하여 어떤 스레드에서 무엇을 처리할지 제어함
+* Scheduler를 위한 전용 Operator
+
+| Operator | Description |
+| -- | -- |
+| SubscribeOn | 구독이 발생한 직후에 실행될 스레드를 지정하는 Operator |
+| publishOn | Downstream으로 Signal을 전송할 때 실행되는 스레드를 제어하는 역할을 하는 Operator |
+| parallel | Round robin 방식으로 CPU 코어 개수만큼의 스레드를 병렬로 실행 |
