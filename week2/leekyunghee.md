@@ -68,6 +68,6 @@ publisher가 끊임없이 emit하는 무수히 많은 데이터를 적절하게 
 
 | Operator | Description |
 | -- | -- |
-| SubscribeOn | 구독이 발생한 직후에 실행될 스레드를 지정하는 Operator |
+| subscribeOn | 구독이 발생한 직후에 실행될 스레드를 지정하는 Operator |
 | publishOn | Downstream으로 Signal을 전송할 때 실행되는 스레드를 제어하는 역할을 하는 Operator |
 | parallel | Round robin 방식으로 CPU 코어 개수만큼의 스레드를 병렬로 실행 |
