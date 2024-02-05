@@ -11,7 +11,7 @@
 
 **🧐 : 플로우 정리**
 
-![KakaoTalk_Photo_2024-02-05-01-19-13.jpeg](https://prod-files-secure.s3.us-west-2.amazonaws.com/571c1952-01e0-464b-8ba7-04ce180d0108/95cfd188-0e67-46f2-96f5-c82cfff9e105/KakaoTalk_Photo_2024-02-05-01-19-13.jpeg)
+![KakaoTalk_Photo_2024-02-05-01-19-13.jpeg](./image/incheol1.jpeg)
 
 1. 시작
 2. publisher가 emit하는 데이터
