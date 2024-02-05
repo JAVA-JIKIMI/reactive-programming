@@ -22,15 +22,15 @@ https://blog.frankel.ch/backpressure-reactive-systems/
 
 ### Drop
 buffer 밖에서 대기하는 먼저 emit된 데이터부터 drop 하는 전략
-![img_2.png](image/img_2.png)
+![img_2.png](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/doc-files/marbles/onBackpressureDrop.svg)
 
 ### Latest
 buffer 밖에서 대기하는 가장 나중(최근)에 emit된 데이터부터 buffer에 채우는 전략
-![img_3.png](image/img_3.png)
+![img_3.png](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/doc-files/marbles/onBackpressureLatest.svg)
 
 ### Buffer
 buffer 안에 있는 데이터부터 drop하는 전략
-![img_1.png](image/img_1.png)
+![img_1.png](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/doc-files/marbles/onBackpressureBufferWithMaxSizeConsumer.svg)
 
 
 # 9.Sink
