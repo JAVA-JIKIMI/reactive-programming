@@ -44,7 +44,7 @@ element를 구독(subscribe)하고 나서 다음 element를 읽기 위해서는 
 
 #### https://projectreactor.io/docs/core/release/reference/#howtoReadMarbles 
 
-* Backpressure 처리 방식은?
+# Backpressure 처리 방식은?
 publisher가 끊임없이 emit하는 무수히 많은 데이터를 적절하게 제어하여 데이터 처리에 과부하가 걸리지 않도록 제어하는 것
 
 | Category | Description |
@@ -55,4 +55,4 @@ publisher가 끊임없이 emit하는 무수히 많은 데이터를 적절하게 
 | LATEST | Downstream으로 전달할 데이터가 버퍼에 가득 찰 경우, 버퍼 밖에서 대기하는 가장 최근에 emit된 데이터부터 버퍼에 채움 |
 | BUFFER | Downstream으로 전달할 데이터가 버퍼에 가득 찰 경우, 버퍼 안에 있는 데이터부터 Drop 시킴 |
 
-* Sink란?
+# Sink란?
