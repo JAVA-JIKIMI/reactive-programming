@@ -24,7 +24,7 @@
 * isEmpty() : Context가 비어 있는지 확인한다.
 * size() : Context 내에 있는 key/value의 개수를 반환한다.
 
-### Context의 특징
+### Context의 특징
 * Context는 구독이 발생할 때마다 하나의 Context가 해당 구독에 연결된다.
 * Context는 Operator 체인의 아래에서 위로 전파된다.
 * 모든 Operator에서 Context에 저장된 데이터를 읽어올 수 있으려면 contextWrite()을 Operator 체인의 맨 마지막에 둬야 한다.
