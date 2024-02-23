@@ -1,12 +1,12 @@
 # 10. Scheduler
 
 
-## Reactor에서 사용되는 Scheduler 
+### Reactor에서 사용되는 Scheduler 
 - Reactor Sequence에서 사용되는 스레드를 관리해 주는 관리자 역할
 - Scheduler를 사용하여 어떤 스레드에서 무엇을 처리할지 제어 가능
 - Scheduler를 사용하면 코드가 간결해지고 개발자가 스레드를 직접 제어해야하는 부담에서 벗어남
 
-
+### 물리 스레드, 논리 스레드
 ▶ 물리적인 스레드  
 - 물리 스레드 = 4코어 8스레드의 스레드 = 논리적인 코어
 - 물리 스레드는 병렬성(Parallelism)과 관련이 있다.
@@ -20,20 +20,11 @@
 ### Scheduler를 위한 전용 Operator
 Reactor에서 Scheduler는 Scheduler 전용 Operator를 통해 사용할 수 있다.
 
-### 사견
-리액티브 프로그래밍은 실행할 장비의 CPU 물리 스레드 개수와 연관되어 있다.
-
-## Scheduler의 종류
-- Schedulers.immediate() : 별도의 스레드를 추가적으로 생성하지 않고, 현재 스레드에서 작업을 처리
-- Schedulers.single() : 스레드 하나만 생성해서 Scheduler가 제거되기 전까지 재사용
-- Schedulers.newSingle() : 호출할때마다 매번 새로운 스레드 하나를 생성
-- Schedulers.boundedElastic() : Blocking I/O 작업에 최적화 
-- Schedulers.parallel() : Non-Blocking I/O 작업에 최적화. CPU 코어 수만큼 스레드 생성
-- Schedulers.newXXX() : 해당 메서드 사용하여 새로운 Scheduler 인스턴스를 생성 가능
 
 # 11. Context
-Context : '어떤 것을 이해하는데 도움이 될만한 관련 정보나 이벤트, 상황'
+사전적 의미 : '어떤 것을 이해하는데 도움이 될만한 관련 정보나 이벤트, 상황'
 Context는 어떠한 상황에서 그 상황을 처리하기 위해 필요한 정보
+즉, 프로그래밍 세계에서의 Context는 어떠한 상황을 처리하거나 해결하기 위해 "필요한 정보를 제공"하는 어떤 것이다.
 
 1) ServletContext
    1) Servlet이 Setvlet Container와 통신하기 위해서 필요한 정보를 제공하는 인터페이스
@@ -42,7 +33,6 @@ Context는 어떠한 상황에서 그 상황을 처리하기 위해 필요한 �
 3) Spring Security에서 SecurityContextHolder
    1) SecurityContext를 관리하는 주체인데, 여기서 SecurityContext는 애플리케이션 사용자의 인증 정보를 제공하는 인터페이스
 
-즉, 프로그래밍 세계에서의 Context는 어떠한 상황을 처리하거나 해결하기 위해 "필요한 정보를 제공"하는 어떤 것이다.
 
 ### Reactor에서의 Context
 ```
