@@ -6,3 +6,6 @@
 
 # 예제 코드 첨부 오류??
  265p <실행 결과>에 `Example12_3.java:18`이 있는데, Example12_3는 15번 line이 맨 끝. 
+
+# TestPublisher
+'정상 동작하는'의 의미
