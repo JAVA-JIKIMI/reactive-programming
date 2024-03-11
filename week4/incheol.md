@@ -36,9 +36,13 @@ public class Example {
 **📚 error 처리**
 
 > error() → java의 throw와 동일하게 예외를 의도적으로 던져야 하는 경우 사용
+>
 > onErrorReturn() → 에러가 발생하면  대체값을 emit한다
+>
 > onErrorResume() → 에러가 발생했을때 대체하는 다른 메서드를 수행 catch와 비슷
+>
 > onErrorContinue() → 에러가 발생했을때 에러 영역내에 있는 데이터는 제거하고, 후속 데이터를 emit
+>
 > retry() → 에러 발생시 재시도 횟수 설정
 > 
 > 📕 390p 1번째 (14장)
