@@ -1,11 +1,5 @@
 
-### ServerWebExchange 
-#### ServerWebExchange는 HTTP 요청,응답, request attributes, sessionattributes를 모두 포함하고 있는 컨테이너
 
-### DispatcherHandler
-#### WebHandler 인터페이스의 구현체 
-#### Spring MVC에서 Front Controller 패턴이 적용된 DispatcherServlet처럼 중앙에서 먼저 요청을 전달받은 후에 다른 컴포넌트에 요청 처리를 위임
-#### DispatcherHandler 자체가 Spring Bean으로 등록되도록 설계되어있고, ApplicationContext에서 HandlerMapping, HandlerAdapter, HandlerResultHandler 등의 요청 처리를 위한 위임 컴포넌트를 검색
 
 | No | 처리 흐름 정리 |
 | -- | -- |
@@ -73,6 +67,9 @@ public class HttpWebHandlerAdapter extends WebHandlerDecorator implements HttpHa
 ```
 #### 1. ServerWebExchange를 생성
 
+### ServerWebExchange 
+### ServerWebExchange는 HTTP 요청,응답, request attributes, sessionattributes를 모두 포함하고 있는 컨테이너
+
 ### handler() 메서드의 파라미터로 전달받은 ServerHttpRequest, ServerHttpResponse로 ServerWebExchange를 생성한다.
 ```java
 ServerWebExchange exchange = createExchange(request, response);
@@ -102,9 +99,11 @@ public interface WebFilter {
 ``` 
 ### 파라미터로 받은 WebFilterChain을 통해 필터 체인을 형성하여 원하는 만큼의 WebFilter를 추가할 수 있다.
 
-#### DispatcherHandler
-### WebHanler 인터페이스의 구현체다. Spring MVC에서 Front Controller 패턴이 적용된 DispatcherServlet처럼 중앙에서 먼저 요청을 전달받은 후에 다른 컴포넌트에 요청 처리를 위임
-### DispatcherHandler 자체가 Spring Bean으로 등록되도록 설계되어있고 ApplicationContext에서 HandlerMapping, HandlerAdapter, HandlerResultHandler 등의 요청 처리를 위한 위임 컴포넌트를 검색
+
+### DispatcherHandler
+#### WebHandler 인터페이스의 구현체 
+#### Spring MVC에서 Front Controller 패턴이 적용된 DispatcherServlet처럼 중앙에서 먼저 요청을 전달받은 후에 다른 컴포넌트에 요청 처리를 위임
+#### DispatcherHandler 자체가 Spring Bean으로 등록되도록 설계되어있고, ApplicationContext에서 HandlerMapping, HandlerAdapter, HandlerResultHandler 등의 요청 처리를 위한 위임 컴포넌트를 검색
 
 #### HandlerAdapter
 handler를 실제로 실행하기 위해 필요한 bean. HandlerAdapter는 HandlerMapping을 통해 얻은 핸들러를 직접적으로 호출하며, 응답 결과로 Mono<HandlerResult>를 리턴받는다.
