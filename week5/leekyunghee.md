@@ -12,7 +12,8 @@
 | 2 | HttpHandler가 요청을 받고 ServerWebExchange(ServerhttpRequest, ServerHttpResponse)를 생성 후 |
 | 3 | WebFilter 체인으로 전달 |
 | 4 | DispatcherHandler에게 전달 |
-| 5 | HandlerMapping에서 ServerWebExchange을 처리할 핸들러 조회 |
-| 6 | HandlerAdapter가 요청을 위임받음 |
-| 7 | 실제 핸들러 호출 |
-| 8 | HandlerResultHandler을 거쳐 response 반환 |
+| 6 |  HandlerMapping List를 원본 Flux의 소스로 전달받음 | 
+| 7 | HandlerMapping에서 ServerWebExchange을 처리할 핸들러 조회 |
+| 8 | HandlerAdapter가 요청을 위임받음 |
+| 9 | 실제 핸들러 호출 |
+| 10 | HandlerResultHandler을 거쳐 response 반환 |
