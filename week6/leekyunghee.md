@@ -16,6 +16,7 @@
 ### Spring WebFlux를 사용하여 Reactive 프로그래밍을 구현하는 예제 
 ### 아래 예제는 Spring WebFlux의 onErrorResume() 메서드를 사용하여 예외를 처리하는 방법을 보여줌
 
+```jsx
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
@@ -38,6 +39,7 @@ public class Main {
         );
     }
 }
+```
 
 ###  이 예제는 WebClient를 사용하여 외부 API로부터 리소스를 가져오는 작업을 수행함 
 ### 그러나 만약 요청이 실패하면 대체 데이터를 반환하도록 onErrorResume()을 사용 그 결과 에러가 발생할 경우 에러 메시지를 출력하고 대체 데이터를 반환
