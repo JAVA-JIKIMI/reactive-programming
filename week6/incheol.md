@@ -109,7 +109,9 @@ public interface BookRepository extends ReactiveCrudRepository<Book, Long> {
 > WebClient는 Spring 5부터 지원하는 Non-Blocking HTTP request를 위한 리액티브 웹 클라이언트로서 함수형 기반의 향상된 API를 제공한다
 > 
 > 출처 : https://digma.ai/restclient-vs-webclient-vs-resttemplate/
+> 
 > 출처 : https://docs.spring.io/spring-framework/reference/integration/rest-clients.html
+> 
 > 📕 498p 1번째 (20장)
 > 
 
