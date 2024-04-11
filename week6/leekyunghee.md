@@ -41,6 +41,6 @@ public class Main {
 
 ###  이 예제는 WebClient를 사용하여 외부 API로부터 리소스를 가져오는 작업을 수행함 
 ### 그러나 만약 요청이 실패하면 대체 데이터를 반환하도록 onErrorResume()을 사용 그 결과 에러가 발생할 경우 에러 메시지를 출력하고 대체 데이터를 반환
-### 주의할 점은 Spring WebFlux의 WebClient는 Reactive 스트림을 반환하기 때문에 Mono나 Flux와 같은 리액티브 타입을 사용하여 비동기 작업을 처리해야 힘.
+### 주의할 점은 Spring WebFlux의 WebClient는 Reactive 스트림을 반환하기 때문에 Mono나 Flux와 같은 리액티브 타입을 사용하여 비동기 작업을 처리해야 함.
 
 
